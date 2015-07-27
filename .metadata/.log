@@ -889,3 +889,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\Git\IDL_Image_Pr
 
 !ENTRY org.eclipse.osgi 2 1 2015-07-27 22:41:51.674
 !MESSAGE NLS unused message: MaxDetailsLengthDialog_3 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2015-07-27 22:45:23.539
+!MESSAGE NLS unused message: DocumentInputStream_error_read in: org.eclipse.core.internal.filebuffers.FileBuffersMessages

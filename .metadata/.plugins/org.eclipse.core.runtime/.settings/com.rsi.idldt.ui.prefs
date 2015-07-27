@@ -1,6 +1,8 @@
-#Mon Jul 27 22:41:49 CST 2015
+#Mon Jul 27 22:46:39 CST 2015
 IDL_VALUES=true
 eclipse.preferences.version=1
+IDLDT_IDLDOC_ROUTINE_TEMPLATE=;+\n; \:Description\:\n;    Describe the procedure.\n;\n; ${parameters}\n;\n; ${keywords}\n;\n; \:Author\: ${user}\n;-
 CHROMACODING_VALUES=true
+IDLDT_IDLDOC_FILE_TEMPLATE=;+\n; \:Author\: ${user}\n;-
 IDLDT_VALUES=true
 IDL_CPU_VECTOR_ENABLE=1

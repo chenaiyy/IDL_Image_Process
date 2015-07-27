@@ -1,0 +1,6 @@
+#Mon Jul 27 22:46:39 CST 2015
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.compare.contentmergeviewer.TextMergeViewer
+org.eclipse.jface.textfont=1|Courier New|15.75|0|WINDOWS|1|-21|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;
+eclipse.preferences.version=1
+ENABLED_DECORATORS=com.rsi.idldt.core.ui.onPathDecorator\:false,com.rsi.idldt.ui.problemsLabelDecorator\:true,com.rsi.idldt.core.ui.excludedFromBuildDecorator\:true,org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,
+ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.jface.textfont
