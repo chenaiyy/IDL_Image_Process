@@ -64,7 +64,12 @@ PRO Spatial_filter
     LAYOUT=[3,3,5],/CURRENT)
     
   ;平滑处理 同样为窗口卷积  采用自带函数Smooth
-  s_img = SMOOTH(Img_Data,[3,3],/EDGE_TRUNCATE)
+  ;加一些噪音
+  xCoords = LINDGEN(col,row) MOD row
+  yCoords = TRANSPOSE(xCoords)
+  noise = -SIN(xCoords*2)-SIN(yCoords*2)
+  imageNoise = Img_Data + 50*noise
+  s_img = SMOOTH(imageNoise,[3,3],/EDGE_TRUNCATE)
   img_smooth = Image(BYTSCL(s_img), TITLE='Smooth', $
     LAYOUT=[3,3,6],/CURRENT)
     
@@ -82,10 +87,13 @@ PRO Spatial_filter
   img_mid = Img_data
   FOR i=1L,col-2 DO BEGIN
     FOR j=1L, row-2 DO BEGIN
-      img_mid[i,j] = MEDIAN(Img_data[i-1:i+1,j-1:j+1])
+      img_mid[i,j] = MEDIAN(imageNoise[i-1:i+1,j-1:j+1])
     ENDFOR
   ENDFOR
   mid_img = Image(BYTSCL(img_mid), TITLE='Median Filter', $
     LAYOUT=[3,3,8],/CURRENT)
+    
+  noise_img = Image(BYTSCL(imageNoise), TITLE='Image With Noise', $
+    LAYOUT=[3,3,9],/CURRENT)
     
 END
