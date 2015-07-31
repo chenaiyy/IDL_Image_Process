@@ -11,14 +11,14 @@ PRO  His_equal
   fname = DIALOG_PICKFILE(/READ, FILTER = '*.bmp')
   Img_Data = Read_bmp(fname)
   
-  img_o = Image(Img_Data, TITLE='Origin Image', $
-    LAYOUT=[2,3,1],/CURRENT)
-    
   IF SIZE(Img_Data,/n_dimensions) EQ 3 THEN BEGIN
     PRINT,'It is a color image, we will only do 1 band!'
     Img_Data = REFORM(Img_Data[0,*,*])
   ENDIF
   
+  img_o = Image(Img_Data, TITLE='Origin Image', $
+    LAYOUT=[2,3,1],/CURRENT)
+    
   ;Get Histogram of origin image
   dim = SIZE(Img_Data,/dimensions)
   row = dim[1]
